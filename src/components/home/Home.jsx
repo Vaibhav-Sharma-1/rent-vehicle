@@ -1,10 +1,11 @@
 import React from "react";
+import HomeContainer from "./HomeContainer/HomeContainer";
 const Home = () => {
   return (
-    <div className="container-fluid nav-bg">
+    <div className="container-fluid">
       <div className="row">
         <div className="col-10 mx-auto">
-          <h1>This is Home</h1>
+          <HomeContainer />
         </div>
       </div>
     </div>
