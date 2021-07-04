@@ -2,9 +2,14 @@ import React from "react";
 import porche from "../../../images/porche.png";
 import SelectCity from "./select-menu/SelectCity";
 import Icon from "./bottom-icons/Icon";
-import './HomeContainer.scss';
+import "./HomeContainer.scss";
 
 const HomeContainer = () => {
+  let image = [];
+  for (let i = 0; i <= 5; i++) {
+    image.push(<Icon />);
+  }
+
   return (
     <>
       <div className="home__main-container">
@@ -33,26 +38,23 @@ const HomeContainer = () => {
         </div>
 
         <div className="home__middle col-3">
-          <div className="location">
+          <div className="location home__middle-common">
             <SelectCity />
           </div>
 
-          <div className="pick-date">
+          <div className="pick-date home__middle-common">
             <input className="pick-date" type="date" />
           </div>
 
-          <div className="return-date">
+          <div className="return-date home__middle-common">
             <input type="date" />
           </div>
         </div>
 
         <div className="home__bottom ">
-          <Icon />
-          <Icon />
-          <Icon />
-          <Icon />
-          <Icon />
-          <Icon />
+          {image.map((data, index) => (
+            <React.Fragment key={index}>{data}</React.Fragment>
+          ))}
         </div>
       </div>
     </>
