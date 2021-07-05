@@ -2,6 +2,7 @@ import React from "react";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import { Link } from "react-router-dom";
+import "./signup.scss"
 
 const SignUp = () => {
   const [gender, setGender] = React.useState("Select Gender");
@@ -24,9 +25,9 @@ console.log(gender)
       <div className="row">
         <div className="col-10 mx-auto">
           <form>
-            <h3 style={{ textAlign: "center" }}>Register</h3>
+            <h3 className="register__heading">Register</h3>
 
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>First name</label>
               <input
                 type="text"
@@ -35,7 +36,7 @@ console.log(gender)
               />
             </div>
 
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>Last name</label>
               <input
                 type="text"
@@ -43,7 +44,7 @@ console.log(gender)
                 placeholder="Last name"
               />
             </div>
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>Mobile </label>
               <input
                 type="number"
@@ -52,7 +53,7 @@ console.log(gender)
               />
             </div>
 
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>Email</label>
               <input
                 type="email"
@@ -61,7 +62,7 @@ console.log(gender)
               />
             </div>
 
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>Password</label>
               <input
                 type="password"
@@ -69,7 +70,7 @@ console.log(gender)
                 placeholder="Enter password"
               />
             </div>
-            <div className="form-group mt-3">
+            <div className="form-group">
               <label>Confirm Password</label>
               <input
                 type="password"
@@ -77,8 +78,8 @@ console.log(gender)
                 placeholder="Enter password"
               />
             </div>
-            <div className="form-group mt-3">
-            <label>Gender</label>
+            <div className="form-group">
+            <label className="gender__label">Gender:</label>
               <Select
                 open={open}
                 onClose={handleClose}
@@ -91,11 +92,11 @@ console.log(gender)
                 <MenuItem value="Others">Others</MenuItem>
               </Select>
             </div>
-            <button type="submit" className="btn btn-primary btn-lg btn-block mt-4">
+            <button type="submit" className="register__color btn btn-primary btn-lg btn-block mt-4">
               Register
             </button>
             <h4 className="forgot-password text-right text-center">
-              Already registered? <Link to="/login" >Log in</Link>
+              Already registered? <Link className="login__link" to="/login" >Log in</Link>
             </h4>
           </form>
         </div>

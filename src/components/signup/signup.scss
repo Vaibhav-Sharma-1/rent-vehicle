@@ -1,0 +1,25 @@
+.container-fluid {
+    & .register__heading {
+        margin-top: 25px;
+        text-align: center;
+    }
+    & form {
+        width: 50%;
+        margin: 0 auto;
+    }
+    & .form-group {
+        margin-top: 0.5px;
+    }
+
+    & .register__color {
+        background-color: #a17505;
+        border: none;
+        color: white;
+    }
+    & .gender__label {
+        margin-right: 20px;
+    }
+    & .login__link {
+        color: #a17505;
+    }
+}
